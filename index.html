@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم البرمجة والدوائر الكهربائية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg class="future-logo" viewBox="0 0 100 100" width="42" height="42">
+                    <g stroke="#e8641c" stroke-width="4" fill="none" stroke-linecap="round">
+                        <!-- الجذع -->
+                        <line x1="50" y1="95" x2="50" y2="55"/>
+                        <line x1="44" y1="95" x2="44" y2="62"/>
+                        <line x1="56" y1="95" x2="56" y2="62"/>
+                        <!-- الفروع -->
+                        <line x1="50" y1="55" x2="50" y2="30"/>
+                        <line x1="50" y1="60" x2="25" y2="40"/>
+                        <line x1="50" y1="60" x2="75" y2="40"/>
+                        <line x1="44" y1="62" x2="30" y2="55"/>
+                        <line x1="56" y1="62" x2="70" y2="55"/>
+                        <line x1="25" y1="40" x2="15" y2="45"/>
+                        <line x1="75" y1="40" x2="85" y2="45"/>
+                        <line x1="50" y1="45" x2="38" y2="32"/>
+                        <line x1="50" y1="45" x2="62" y2="32"/>
+                    </g>
+                    <g fill="#e8641c">
+                        <circle cx="50" cy="24" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="15" cy="45" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="85" cy="45" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="38" cy="27" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="62" cy="27" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="25" cy="36" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="75" cy="36" r="5" fill="none" stroke="#e8641c" stroke-width="4"/>
+                        <circle cx="30" cy="52" r="4" fill="none" stroke="#e8641c" stroke-width="3"/>
+                        <circle cx="70" cy="52" r="4" fill="none" stroke="#e8641c" stroke-width="3"/>
+                    </g>
+                </svg>
+                <span class="logo-text"><bdi>FUTURE</bdi></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li><a href="#programming">لغات البرمجة</a></li>
+                <li><a href="#playground">⌨️ جرّب الكود</a></li>
+                <li><a href="#languages">أشهر اللغات</a></li>
+                <li><a href="#circuits">الدوائر الكهربائية</a></li>
+                <li><a href="#builder">🔧 ابنِ دائرة</a></li>
+                <li><a href="#calculator">حاسبة أوم</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">✨ منصة تعليمية مجانية بالعربية</span>
+            <h1>عالم <span class="highlight">البرمجة</span> و<span class="highlight-alt">الكهرباء</span></h1>
+            <p>رحلتك الشاملة لفهم لغات البرمجة والدوائر الكهربائية من الصفر</p>
+            <div class="hero-buttons">
+                <a href="#programming" class="btn btn-primary">💻 ابدأ مع البرمجة</a>
+                <a href="#circuits" class="btn btn-secondary">⚡ اكتشف الدوائر</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="circuit-animation">
+                <div class="circuit-node node1"></div>
+                <div class="circuit-node node2"></div>
+                <div class="circuit-node node3"></div>
+                <div class="circuit-line line1"></div>
+                <div class="circuit-line line2"></div>
+                <div class="circuit-line line3"></div>
+                <div class="pulse"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم: ما هي لغة البرمجة؟ -->
+    <section class="section" id="programming">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">💻 البرمجة</span>
+                <h2>ما هي لغة البرمجة؟</h2>
+                <p>لغة البرمجة هي وسيلة التواصل بين الإنسان والحاسوب</p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🗣️</div>
+                    <h3>لغة التواصل مع الحاسوب</h3>
+                    <p>الحاسوب لا يفهم سوى لغة الآلة (0 و 1)، ولغات البرمجة هي الوسيط الذي يمكّننا من كتابة أوامر مفهومة لنا ثم تُترجم للحاسوب.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📝</div>
+                    <h3>كتابة التعليمات</h3>
+                    <p>نكتب "الكود" وهو مجموعة تعليمات منطقية متسلسلة تخبر الحاسوب بما يجب فعله خطوة بخطوة لحل مشكلة معينة.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⚙️</div>
+                    <h3>بناء التطبيقات</h3>
+                    <p>كل ما حولك من تطبيقات ومواقع وألعاب وأنظمة تشغيل بُني باستخدام لغات برمجة مختلفة، كل لغة لها نقاط قوتها.</p>
+                </div>
+            </div>
+
+            <!-- أنواع لغات البرمجة -->
+            <div class="subsection">
+                <h3 class="subsection-title">أنواع لغات البرمجة</h3>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <h4>🔽 لغات منخفضة المستوى</h4>
+                        <p>قريبة من لغة الآلة، سريعة جداً لكنها صعبة التعلم.</p>
+                        <div class="tags">
+                            <span class="tag">Assembly</span>
+                            <span class="tag">C</span>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <h4>🔼 لغات عالية المستوى</h4>
+                        <p>قريبة من لغة الإنسان، سهلة التعلم والاستخدام.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <h4>📦 لغات مُترجمة (Compiled)</h4>
+                        <p>تُترجم كاملة دفعة واحدة قبل التشغيل، أسرع في الأداء.</p>
+                        <div class="tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Rust</span>
+                            <span class="tag">Go</span>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <h4>🔄 لغات مُفسَّرة (Interpreted)</h4>
+                        <p>تُترجم سطراً بسطر أثناء التشغيل، أسهل في التطوير.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مثال كود تفاعلي -->
+            <div class="code-demo">
+                <h3 class="subsection-title">مثال: نفس البرنامج بلغات مختلفة</h3>
+                <div class="code-tabs">
+                    <button class="code-tab active" data-lang="python">Python</button>
+                    <button class="code-tab" data-lang="javascript">JavaScript</button>
+                    <button class="code-tab" data-lang="cpp">C++</button>
+                    <button class="code-tab" data-lang="java">Java</button>
+                </div>
+                <div class="code-window">
+                    <div class="code-window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title" id="codeTitle">hello.py</span>
+                    </div>
+                    <pre class="code-content" id="codeContent" dir="ltr"></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم: محرر الأكواد التفاعلي -->
+    <section class="section section-alt" id="playground">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">⌨️ تعلم ذاتي</span>
+                <h2>جرّب الكود بنفسك!</h2>
+                <p>اكتب الكود واضغط "تشغيل" لترى النتيجة فوراً</p>
+            </div>
+
+            <div class="playground-box">
+                <div class="playground-tabs">
+                    <button class="pg-tab active" data-pg="python">🐍 Python</button>
+                    <button class="pg-tab" data-pg="javascript">🌐 JavaScript</button>
+                    <button class="pg-tab" data-pg="html">🎨 HTML</button>
+                </div>
+                <div class="playground-editor">
+                    <div class="editor-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title" id="pgTitle">main.py</span>
+                        <button class="run-btn" id="runBtn">▶ تشغيل</button>
+                        <button class="clear-editor-btn" id="clearEditor" title="مسح الكود">🗑️</button>
+                    </div>
+                    <div class="editor-body">
+                        <div class="line-numbers" id="lineNumbers">1</div>
+                        <div class="editor-wrapper">
+                            <textarea id="codeEditor" dir="ltr" spellcheck="false"></textarea>
+                            <div class="autocomplete-box" id="autocompleteBox"></div>
+                        </div>
+                    </div>
+                    <div class="editor-statusbar">
+                        <span id="cursorPos">سطر 1، عمود 1</span>
+                        <span id="charCount">0 حرف</span>
+                        <span class="status-lang" id="statusLang">Python</span>
+                    </div>
+                </div>
+                <div class="playground-output">
+                    <div class="output-header">
+                        📤 النتيجة (Output)
+                        <button class="clear-output-btn" id="clearOutput">مسح</button>
+                    </div>
+                    <pre id="outputArea" dir="ltr">اضغط "تشغيل" لتنفيذ الكود...</pre>
+                    <iframe id="htmlPreview" class="html-preview" style="display:none" sandbox="allow-scripts"></iframe>
+                </div>
+                <p class="pg-note" id="pgNote">💡 بايثون وجافاسكريبت وHTML تعمل محلياً في متصفحك - اكتب أكواداً طويلة بحرية!</p>
+            </div>
+
+            <!-- تمارين تعليمية -->
+            <div class="exercises">
+                <h3 class="subsection-title">🎯 تمارين للتدرب</h3>
+                <div class="exercise-grid">
+                    <div class="exercise-card clickable" data-ex="1">
+                        <span class="ex-level easy">سهل</span>
+                        <h4>مرحباً بالعالم</h4>
+                        <p>اطبع جملة ترحيب باسمك</p>
+                    </div>
+                    <div class="exercise-card clickable" data-ex="2">
+                        <span class="ex-level easy">سهل</span>
+                        <h4>حاسبة بسيطة</h4>
+                        <p>اجمع واطرح رقمين</p>
+                    </div>
+                    <div class="exercise-card clickable" data-ex="3">
+                        <span class="ex-level medium">متوسط</span>
+                        <h4>عدّاد الأرقام الزوجية</h4>
+                        <p>اطبع الأرقام الزوجية من 1 إلى 20</p>
+                    </div>
+                    <div class="exercise-card clickable" data-ex="4">
+                        <span class="ex-level medium">متوسط</span>
+                        <h4>متوسط الدرجات</h4>
+                        <p>احسب متوسط قائمة درجات</p>
+                    </div>
+                    <div class="exercise-card clickable" data-ex="5">
+                        <span class="ex-level hard">صعب</span>
+                        <h4>لعبة التخمين</h4>
+                        <p>برنامج يخمن رقماً عشوائياً</p>
+                    </div>
+                    <div class="exercise-card clickable" data-ex="6">
+                        <span class="ex-level hard">صعب</span>
+                        <h4>فيبوناتشي</h4>
+                        <p>اطبع أول 10 أرقام من المتتالية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم: أشهر لغات البرمجة -->
+    <section class="section section-alt" id="languages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🏆 الأشهر</span>
+                <h2>أشهر لغات البرمجة واستخداماتها</h2>
+                <p>اختر اللغة المناسبة حسب المجال الذي تريد العمل فيه</p>
+            </div>
+
+            <div class="languages-grid">
+                <div class="lang-card clickable" data-lang="python" style="--lang-color: #3776ab">
+                    <div class="lang-header">
+                        <span class="lang-emoji">🐍</span>
+                        <h3>Python</h3>
+                    </div>
+                    <p class="lang-desc">الأسهل للمبتدئين، بسيطة وقوية جداً.</p>
+                    <div class="lang-uses">
+                        <span>🤖 ذكاء اصطناعي</span>
+                        <span>📊 تحليل بيانات</span>
+                        <span>🌐 مواقع ويب</span>
+                    </div>
+                    <div class="lang-level">
+                        <span>سهولة التعلم</span>
+                        <div class="level-bar"><div class="level-fill" style="width: 95%"></div></div>
+                    </div>
+                </div>
+
+                <div class="lang-card clickable" data-lang="javascript" style="--lang-color: #f7df1e">
+                    <div class="lang-header">
+                        <span class="lang-emoji">🌐</span>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <p class="lang-desc">لغة الويب الأولى، تعمل في كل متصفح.</p>
+                    <div class="lang-uses">
+                        <span>🖥️ مواقع تفاعلية</span>
+                        <span>📱 تطبيقات جوال</span>
+                        <span>🎮 ألعاب متصفح</span>
+                    </div>
+                    <div class="lang-level">
+                        <span>سهولة التعلم</span>
+                        <div class="level-bar"><div class="level-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
+
+                <div class="lang-card clickable" data-lang="java" style="--lang-color: #ed8b00">
+                    <div class="lang-header">
+                        <span class="lang-emoji">☕</span>
+                        <h3>Java</h3>
+                    </div>
+                    <p class="lang-desc">قوية ومستقرة، تستخدمها الشركات الكبرى.</p>
+                    <div class="lang-uses">
+                        <span>📱 تطبيقات أندرويد</span>
+                        <span>🏢 أنظمة الشركات</span>
+                        <span>🏦 الأنظمة البنكية</span>
+                    </div>
+                    <div class="lang-level">
+                        <span>سهولة التعلم</span>
+                        <div class="level-bar"><div class="level-fill" style="width: 65%"></div></div>
+                    </div>
+                </div>
+
+                <div class="lang-card clickable" data-lang="cpp" style="--lang-color: #00599c">
+                    <div class="lang-header">
+                        <span class="lang-emoji">⚡</span>
+                        <h3>C++</h3>
+                    </div>
+                    <p class="lang-desc">الأسرع أداءً، للأنظمة والألعاب الضخمة.</p>
+                    <div class="lang-uses">
+                        <span>🎮 محركات الألعاب</span>
+                        <span>💻 أنظمة التشغيل</span>
+                        <span>🤖 الروبوتات</span>
+                    </div>
+                    <div class="lang-level">
+                        <span>سهولة التعلم</span>
+                        <div class="level-bar"><div class="level-fill" style="width: 45%"></div></div>
+                    </div>
+                </div>
+
+                <div class="lang-card clickable" data-lang="go" style="--lang-color: #00add8">
+                    <div class="lang-header">
+                        <span class="lang-emoji">🐹</span>
+                        <h3>Go</h3>
+                    </div>
+                    <p class="lang-desc">من Google، سريعة وبسيطة للخوادم.</p>
+                    <div class="lang-uses">
+                        <span>☁️ الحوسبة السحابية</span>
+                        <span>🖧 الخوادم</span>
+                        <span>🔧 أدوات DevOps</span>
+                    </div>
+                    <div class="lang-level">
+                        <span>سهولة التعلم</span>
+                        <div class="level-bar"><div class="level-fill" style="width: 75%"></div></div>
+                    </div>
+                </div>
+
+                <div class="lang-card clickable" data-lang="rust" style="--lang-color: #dea584">
+                    <div class="lang-header">
+                        <span class="lang-emoji">🦀</span>
+                        <h3>Rust</h3>
+                    </div>
+                    <p class="lang-desc">آمنة وسريعة، الأكثر حباً بين المطورين.</p>
+                    <div class="lang-uses">
+                        <span>🔒 أنظمة آمنة</span>
+                        <span>⚙️ برمجة أنظمة</span>
+                        <span>🌐 WebAssembly</span>
+                    </div>
+                    <div class="lang-level">
+                        <span>سهولة التعلم</span>
+                        <div class="level-bar"><div class="level-fill" style="width: 40%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم: الدوائر الكهربائية -->
+    <section class="section" id="circuits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge badge-electric">⚡ الكهرباء</span>
+                <h2>ما هي الدائرة الكهربائية؟</h2>
+                <p>مسار مغلق يسري فيه التيار الكهربائي من المصدر ويعود إليه</p>
+            </div>
+
+            <div class="circuit-explain">
+                <div class="circuit-text">
+                    <h3>🔋 أساسيات الدائرة الكهربائية</h3>
+                    <p>الدائرة الكهربائية هي <strong>مسار مغلق</strong> يتكون من مصدر للطاقة (كالبطارية) وأسلاك موصلة ومكونات كهربائية (كالمصباح). يسري التيار الكهربائي من القطب الموجب عبر المكونات ويعود إلى القطب السالب.</p>
+                    <ul class="circuit-list">
+                        <li><strong>التيار الكهربائي (I):</strong> تدفق الشحنات الكهربائية، ويُقاس بالأمبير (A)</li>
+                        <li><strong>الجهد الكهربائي (V):</strong> القوة الدافعة للتيار، ويُقاس بالفولت (V)</li>
+                        <li><strong>المقاومة (R):</strong> ممانعة مرور التيار، وتُقاس بالأوم (Ω)</li>
+                    </ul>
+                </div>
+                <div class="circuit-diagram">
+                    <svg viewBox="0 0 400 300" class="circuit-svg">
+                        <!-- الأسلاك -->
+                        <rect x="60" y="60" width="280" height="180" fill="none" stroke="#f59e0b" stroke-width="4" rx="10"/>
+                        <!-- البطارية -->
+                        <line x1="185" y1="240" x2="185" y2="260" stroke="#4ade80" stroke-width="12"/>
+                        <line x1="215" y1="230" x2="215" y2="270" stroke="#ef4444" stroke-width="4"/>
+                        <text x="200" y="295" fill="#e8e8f0" font-size="14" text-anchor="middle">بطارية 🔋</text>
+                        <!-- المصباح -->
+                        <circle cx="200" cy="60" r="22" fill="none" stroke="#fbbf24" stroke-width="4" class="lamp"/>
+                        <line x1="185" y1="45" x2="215" y2="75" stroke="#fbbf24" stroke-width="3"/>
+                        <line x1="215" y1="45" x2="185" y2="75" stroke="#fbbf24" stroke-width="3"/>
+                        <text x="200" y="30" fill="#e8e8f0" font-size="14" text-anchor="middle">مصباح 💡</text>
+                        <!-- المقاومة -->
+                        <polyline points="60,130 75,130 85,115 105,145 125,115 145,145 155,130 60,130" fill="none" stroke="#60a5fa" stroke-width="3" transform="translate(0,0)"/>
+                        <text x="40" y="135" fill="#e8e8f0" font-size="14" text-anchor="middle">مقاومة</text>
+                        <!-- أسهم التيار -->
+                        <g class="current-flow">
+                            <circle r="5" fill="#4ade80">
+                                <animateMotion dur="4s" repeatCount="indefinite" path="M60,60 L340,60 L340,240 L60,240 Z"/>
+                            </circle>
+                            <circle r="5" fill="#4ade80" opacity="0.7">
+                                <animateMotion dur="4s" begin="1.3s" repeatCount="indefinite" path="M60,60 L340,60 L340,240 L60,240 Z"/>
+                            </circle>
+                            <circle r="5" fill="#4ade80" opacity="0.5">
+                                <animateMotion dur="4s" begin="2.6s" repeatCount="indefinite" path="M60,60 L340,60 L340,240 L60,240 Z"/>
+                            </circle>
+                        </g>
+                    </svg>
+                    <p class="diagram-caption">دائرة كهربائية بسيطة: بطارية + مصباح + مقاومة</p>
+                </div>
+            </div>
+
+            <!-- أنواع الدوائر -->
+            <div class="subsection">
+                <h3 class="subsection-title">أنواع الدوائر الكهربائية</h3>
+                <div class="circuit-types">
+                    <div class="circuit-type-card clickable" data-topic="series">
+                        <div class="type-icon">➡️</div>
+                        <h4>دائرة التوالي (Series)</h4>
+                        <p>المكونات موصولة على مسار واحد. التيار متساوٍ في جميع النقاط، والجهد يتوزع على المكونات.</p>
+                        <div class="formula" dir="ltr">R<sub>total</sub> = R₁ + R₂ + R₃</div>
+                        <p class="type-note">💡 إذا انقطع أحد المكونات تتوقف الدائرة كاملة</p>
+                    </div>
+                    <div class="circuit-type-card clickable" data-topic="parallel">
+                        <div class="type-icon">🔀</div>
+                        <h4>دائرة التوازي (Parallel)</h4>
+                        <p>المكونات موصولة على مسارات متعددة. الجهد متساوٍ على كل فرع، والتيار يتوزع بين الفروع.</p>
+                        <div class="formula" dir="ltr">1/R<sub>total</sub> = 1/R₁ + 1/R₂</div>
+                        <p class="type-note">💡 إذا تعطل فرع تستمر باقي الفروع بالعمل</p>
+                    </div>
+                    <div class="circuit-type-card clickable" data-topic="mixed">
+                        <div class="type-icon">🔁</div>
+                        <h4>الدائرة المختلطة</h4>
+                        <p>دمج بين التوالي والتوازي في دائرة واحدة، وهي الأكثر شيوعاً في الأجهزة الحقيقية.</p>
+                        <div class="formula" dir="ltr">نحلل كل جزء على حدة</div>
+                        <p class="type-note">💡 معظم دوائر الأجهزة المنزلية من هذا النوع</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قانون أوم -->
+            <div class="ohm-law">
+                <h3 class="subsection-title">📐 قانون أوم - أهم قانون في الكهرباء</h3>
+                <div class="ohm-content">
+                    <div class="ohm-triangle" dir="ltr">
+                        <div class="triangle-top">V</div>
+                        <div class="triangle-bottom">
+                            <span>I</span>
+                            <span>×</span>
+                            <span>R</span>
+                        </div>
+                    </div>
+                    <div class="ohm-formulas">
+                        <div class="ohm-formula">
+                            <span class="formula-label">الجهد</span>
+                            <span class="formula-eq" dir="ltr">V = I × R</span>
+                        </div>
+                        <div class="ohm-formula">
+                            <span class="formula-label">التيار</span>
+                            <span class="formula-eq" dir="ltr">I = V ÷ R</span>
+                        </div>
+                        <div class="ohm-formula">
+                            <span class="formula-label">المقاومة</span>
+                            <span class="formula-eq" dir="ltr">R = V ÷ I</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم: مكونات الدائرة -->
+    <section class="section section-alt" id="components">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge badge-electric">🔧 المكونات</span>
+                <h2>مكونات الدائرة الكهربائية</h2>
+                <p>تعرّف على أهم العناصر المستخدمة في بناء الدوائر</p>
+            </div>
+
+            <div class="components-grid">
+                <div class="component-card clickable" data-topic="battery">
+                    <div class="component-icon">🔋</div>
+                    <h4>البطارية (مصدر الجهد)</h4>
+                    <p>توفر الطاقة الكهربائية للدائرة وتدفع التيار خلالها.</p>
+                    <span class="unit">الوحدة: فولت (V)</span>
+                </div>
+                <div class="component-card clickable" data-topic="resistor">
+                    <div class="component-icon">〰️</div>
+                    <h4>المقاومة (Resistor)</h4>
+                    <p>تُقلل تدفق التيار وتحمي المكونات الحساسة من التلف.</p>
+                    <span class="unit">الوحدة: أوم (Ω)</span>
+                </div>
+                <div class="component-card clickable" data-topic="lamp">
+                    <div class="component-icon">💡</div>
+                    <h4>المصباح (Lamp)</h4>
+                    <p>يحول الطاقة الكهربائية إلى طاقة ضوئية وحرارية.</p>
+                    <span class="unit">الوحدة: واط (W)</span>
+                </div>
+                <div class="component-card clickable" data-topic="switch">
+                    <div class="component-icon">🔌</div>
+                    <h4>المفتاح (Switch)</h4>
+                    <p>يتحكم في فتح الدائرة وإغلاقها لتشغيل أو إيقاف التيار.</p>
+                    <span class="unit">حالتان: ON / OFF</span>
+                </div>
+                <div class="component-card clickable" data-topic="capacitor">
+                    <div class="component-icon">🫙</div>
+                    <h4>المكثف (Capacitor)</h4>
+                    <p>يخزن الشحنة الكهربائية مؤقتاً ثم يفرغها عند الحاجة.</p>
+                    <span class="unit">الوحدة: فاراد (F)</span>
+                </div>
+                <div class="component-card clickable" data-topic="inductor">
+                    <div class="component-icon">🧲</div>
+                    <h4>الملف (Inductor)</h4>
+                    <p>يخزن الطاقة في مجال مغناطيسي ويقاوم تغيرات التيار.</p>
+                    <span class="unit">الوحدة: هنري (H)</span>
+                </div>
+                <div class="component-card clickable" data-topic="diode">
+                    <div class="component-icon">▶️</div>
+                    <h4>الدايود (Diode)</h4>
+                    <p>يسمح بمرور التيار في اتجاه واحد فقط ويمنعه في الاتجاه المعاكس.</p>
+                    <span class="unit">مثال: LED</span>
+                </div>
+                <div class="component-card clickable" data-topic="transistor">
+                    <div class="component-icon">🎛️</div>
+                    <h4>الترانزستور (Transistor)</h4>
+                    <p>مفتاح إلكتروني أو مضخم للإشارة، وهو أساس جميع المعالجات.</p>
+                    <span class="unit">قلب الإلكترونيات 💓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم: محاكي بناء الدوائر -->
+    <section class="section" id="builder">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge badge-electric">🔧 محاكي تفاعلي</span>
+                <h2>ابنِ دائرتك بنفسك!</h2>
+                <p>أضف مكونات للدائرة ثم شغّلها وشاهد النتيجة</p>
+            </div>
+
+            <div class="builder-box">
+                <div class="builder-tools">
+                    <h4>🧰 صندوق الأدوات</h4>
+                    <div class="tools-grid">
+                        <button class="tool-btn" data-add="battery">🔋 بطارية<br><small>+9 فولت</small></button>
+                        <button class="tool-btn" data-add="lamp">💡 مصباح<br><small>يحتاج 4.5V+</small></button>
+                        <button class="tool-btn" data-add="resistor">〰️ مقاومة<br><small>10 أوم</small></button>
+                        <button class="tool-btn" data-add="switch">🔌 مفتاح<br><small>فتح/إغلاق</small></button>
+                    </div>
+                    <div class="builder-actions">
+                        <button class="btn btn-secondary" id="powerBtn">⚡ تشغيل الدائرة</button>
+                        <button class="btn btn-outline" id="clearCircuit">🗑️ مسح الكل</button>
+                    </div>
+                    <div class="builder-meters">
+                        <div class="meter">
+                            <span class="meter-label">🔋 الجهد</span>
+                            <span class="meter-value" id="voltageMeter">0 V</span>
+                        </div>
+                        <div class="meter">
+                            <span class="meter-label">⚡ التيار</span>
+                            <span class="meter-value" id="currentMeter">0 A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="builder-canvas">
+                    <h4>🔌 لوحة العمل <small class="canvas-hint">(المكونات تُرصّ تلقائياً في دائرة مغلقة)</small></h4>
+                    <div class="circuit-stage" id="circuitStage">
+                        <svg class="circuit-wires" id="circuitWires" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid meet">
+                            <!-- إطار الدائرة (الأسلاك) -->
+                            <rect x="80" y="60" width="640" height="300" rx="16" fill="none" stroke="#8b5a2b" stroke-width="10" class="wire-frame"/>
+                            <rect x="80" y="60" width="640" height="300" rx="16" fill="none" stroke="#d4a05a" stroke-width="4" class="wire-inner"/>
+                            <!-- الإلكترونات المتحركة -->
+                            <g class="electrons" id="electronsGroup" style="display:none">
+                                <circle r="7" fill="#38bdf8" class="electron"><animateMotion dur="3s" repeatCount="indefinite" path="M80,60 L720,60 L720,360 L80,360 Z"/></circle>
+                                <circle r="7" fill="#38bdf8" class="electron"><animateMotion dur="3s" begin="0.5s" repeatCount="indefinite" path="M80,60 L720,60 L720,360 L80,360 Z"/></circle>
+                                <circle r="7" fill="#38bdf8" class="electron"><animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M80,60 L720,60 L720,360 L80,360 Z"/></circle>
+                                <circle r="7" fill="#38bdf8" class="electron"><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" path="M80,60 L720,60 L720,360 L80,360 Z"/></circle>
+                                <circle r="7" fill="#38bdf8" class="electron"><animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M80,60 L720,60 L720,360 L80,360 Z"/></circle>
+                                <circle r="7" fill="#38bdf8" class="electron"><animateMotion dur="3s" begin="2.5s" repeatCount="indefinite" path="M80,60 L720,60 L720,360 L80,360 Z"/></circle>
+                            </g>
+                        </svg>
+                        <!-- فتحات المكونات على الدائرة -->
+                        <div class="slot slot-top" data-slot="top">
+                            <span class="slot-hint">+ ضع مكوناً هنا</span>
+                        </div>
+                        <div class="slot slot-right" data-slot="right">
+                            <span class="slot-hint">+</span>
+                        </div>
+                        <div class="slot slot-bottom" data-slot="bottom">
+                            <span class="slot-hint">+</span>
+                        </div>
+                        <div class="slot slot-left" data-slot="left">
+                            <span class="slot-hint">+</span>
+                        </div>
+                    </div>
+                    <div class="circuit-status" id="circuitStatus">
+                        <span class="status-icon">⭕</span>
+                        <span id="statusText">الدائرة فارغة - أضف بطارية للبدء</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="builder-rules">
+                <h4>📜 قواعد الدائرة الصحيحة:</h4>
+                <ul>
+                    <li>✅ تحتاج بطارية واحدة على الأقل كمصدر للطاقة</li>
+                    <li>💡 المصباح يضيء فقط إذا كان الجهد الكافي متوفراً والمفتاح مغلق</li>
+                    <li>〰️ كل مقاومة تقلل التيار المار في الدائرة</li>
+                    <li>🔌 المفتاح المفتوح يقطع التيار عن الدائرة كاملة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم: حاسبة قانون أوم -->
+    <section class="section" id="calculator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge badge-electric">🧮 تفاعلي</span>
+                <h2>حاسبة قانون أوم</h2>
+                <p>أدخل أي قيمتين وسنحسب لك الثالثة تلقائياً</p>
+            </div>
+
+            <div class="calculator-box">
+                <div class="calc-inputs">
+                    <div class="calc-group">
+                        <label>الجهد (V) - فولت</label>
+                        <input type="number" id="voltage" placeholder="مثال: 12" step="any" dir="ltr">
+                    </div>
+                    <div class="calc-group">
+                        <label>التيار (I) - أمبير</label>
+                        <input type="number" id="current" placeholder="مثال: 2" step="any" dir="ltr">
+                    </div>
+                    <div class="calc-group">
+                        <label>المقاومة (R) - أوم</label>
+                        <input type="number" id="resistance" placeholder="مثال: 6" step="any" dir="ltr">
+                    </div>
+                </div>
+                <div class="calc-actions">
+                    <button class="btn btn-primary" id="calcBtn">احسب 🧮</button>
+                    <button class="btn btn-outline" id="resetCalc">مسح</button>
+                </div>
+                <div class="calc-result" id="calcResult">
+                    <p>أدخل قيمتين واضغط "احسب"</p>
+                </div>
+            </div>
+
+            <!-- العلاقة بين البرمجة والكهرباء -->
+            <div class="connection-box">
+                <h3>🔗 ما العلاقة بين البرمجة والدوائر الكهربائية؟</h3>
+                <div class="connection-grid">
+                    <div class="connection-item">
+                        <span class="conn-icon">💾</span>
+                        <p><strong>المعالج</strong> الذي ينفذ برامجك هو في الأساس مليارات الترانزستورات في دوائر متناهية الصغر</p>
+                    </div>
+                    <div class="connection-item">
+                        <span class="conn-icon">🔢</span>
+                        <p><strong>النظام الثنائي</strong> (0 و 1) يمثل كهربائياً: لا يوجد تيار = 0، يوجد تيار = 1</p>
+                    </div>
+                    <div class="connection-item">
+                        <span class="conn-icon">🤖</span>
+                        <p><strong>الروبوتات والأردوينو</strong> تجمع بينهما: تكتب كوداً يتحكم في دوائر حقيقية</p>
+                    </div>
+                    <div class="connection-item">
+                        <span class="conn-icon">🏠</span>
+                        <p><strong>المنازل الذكية</strong> وإنترنت الأشياء (IoT) = برمجة + إلكترونيات معاً</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة تفاصيل اللغة -->
+    <div class="modal-overlay" id="langModal">
+        <div class="lang-modal">
+            <button class="modal-close" id="closeLangModal">✕</button>
+            <div class="lang-modal-header" id="modalHeader">
+                <span class="modal-emoji" id="modalEmoji">☕</span>
+                <div>
+                    <h2 id="modalTitle">Java</h2>
+                    <p id="modalTagline">لغة قوية ومستقرة</p>
+                </div>
+            </div>
+            <div class="lang-modal-body">
+                <div class="modal-section">
+                    <h3>📖 نبذة عن اللغة</h3>
+                    <p id="modalAbout"></p>
+                </div>
+                <div class="modal-section">
+                    <h3>🎯 أبرز الاستخدامات</h3>
+                    <div class="modal-uses" id="modalUses"></div>
+                </div>
+                <div class="modal-section">
+                    <h3>✨ المميزات والعيوب</h3>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✅ المميزات</h4>
+                            <ul id="modalPros"></ul>
+                        </div>
+                        <div class="cons">
+                            <h4>⚠️ العيوب</h4>
+                            <ul id="modalCons"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>💻 مثال على الكود</h3>
+                    <div class="modal-code-window">
+                        <div class="code-window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-title" id="modalCodeTitle"></span>
+                        </div>
+                        <pre class="code-content modal-code" id="modalCode" dir="ltr"></pre>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>📊 معلومات سريعة</h3>
+                    <div class="quick-facts" id="modalFacts"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر المساعد الذكي العائم -->
+    <button class="ai-fab" id="aiFab" title="اسأل المساعد الذكي">
+        🤖
+    </button>
+
+    <!-- نافذة المساعد الذكي -->
+    <div class="ai-chat" id="aiChat">
+        <div class="ai-chat-header">
+            <div class="ai-chat-title">
+                <span class="ai-avatar">🤖</span>
+                <div>
+                    <h3>المساعد الذكي</h3>
+                    <p>اسألني عن البرمجة والكهرباء</p>
+                </div>
+            </div>
+            <button class="ai-close" id="aiClose">✕</button>
+        </div>
+        <div class="ai-messages" id="aiMessages">
+            <div class="ai-msg bot">
+                <p>أهلاً بك! 👋 أنا مساعدك الذكي. اسألني أي سؤال عن:</p>
+                <div class="ai-suggestions">
+                    <button class="ai-sug" data-q="ما هي لغة البرمجة؟">ما هي لغة البرمجة؟</button>
+                    <button class="ai-sug" data-q="اشرح قانون أوم">اشرح قانون أوم</button>
+                    <button class="ai-sug" data-q="ما الفرق بين التوالي والتوازي؟">التوالي والتوازي</button>
+                    <button class="ai-sug" data-q="ما هي أفضل لغة للمبتدئين؟">أفضل لغة للمبتدئين</button>
+                </div>
+            </div>
+        </div>
+        <div class="ai-input-area">
+            <input type="text" id="aiInput" placeholder="اكتب سؤالك هنا...">
+            <button id="aiSend">➤</button>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <h3>تقنية Hub</h3>
+                    <p>نتعلم البرمجة والكهرباء بطريقة مبسطة</p>
+                </div>
+                <div class="footer-links">
+                    <h4>أقسام الموقع</h4>
+                    <a href="#programming">لغات البرمجة</a>
+                    <a href="#languages">أشهر اللغات</a>
+                    <a href="#circuits">الدوائر الكهربائية</a>
+                    <a href="#calculator">حاسبة أوم</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>H.Q • 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
